@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df2553dd.css",
+    "main.js": "/static/js/main.7656ed22.js",
+    "static/js/787.d0e8f19a.chunk.js": "/static/js/787.d0e8f19a.chunk.js",
+    "static/media/cctvIcon1.png": "/static/media/cctvIcon1.105e90f1c271433e0c84.png",
+    "static/media/depaLogo.png": "/static/media/depaLogo.b4eb6daa5e5e3e5889e7.png",
+    "static/media/yellowText.png": "/static/media/yellowText.dd05b4dc54aef631b9c4.png",
+    "static/media/redStatus.png": "/static/media/redStatus.e43b47bb9f90a10c74a3.png",
+    "static/media/en.png": "/static/media/en.871c68892e57a298f11a.png",
+    "static/media/redText.png": "/static/media/redText.39bfa09d93c881ea4cf2.png",
+    "static/media/greenStatus.png": "/static/media/greenStatus.c09fa60024daed5498d2.png",
+    "static/media/yellowStatus.png": "/static/media/yellowStatus.fd788455476aa1a0e910.png",
+    "static/media/yellowTextEng.png": "/static/media/yellowTextEng.bf4974a8311039c3bc72.png",
+    "static/media/redTextEng.png": "/static/media/redTextEng.8b80223d31c3c111703a.png",
+    "static/media/greenText.png": "/static/media/greenText.8948de75dd465f8f5da9.png",
+    "static/media/loading.gif": "/static/media/loading.64d63a9ac0b03f3d51f4.gif",
+    "static/media/greenTextEng.png": "/static/media/greenTextEng.4180b530665d7e4cfd91.png",
+    "static/media/th.png": "/static/media/th.9629dc67c1c7f0416c9f.png",
+    "static/media/cctvIcon2.png": "/static/media/cctvIcon2.c2da09d1b4972c4c749c.png",
+    "index.html": "/index.html",
+    "main.df2553dd.css.map": "/static/css/main.df2553dd.css.map",
+    "main.7656ed22.js.map": "/static/js/main.7656ed22.js.map",
+    "787.d0e8f19a.chunk.js.map": "/static/js/787.d0e8f19a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.df2553dd.css",
+    "static/js/main.7656ed22.js"
+  ]
+}

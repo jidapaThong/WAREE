@@ -1,0 +1,61 @@
+{
+  "camera1": {
+      "image_path": "cam1.png",
+      "line_positions": [355, 235, 175, 142, 120, 105, 94, 87, 80, 60],
+      "water_levels": [
+        {"level": 10, "zone": 2},
+        {"level": 9, "zone": 2},
+        {"level": 8, "zone": 2},
+        {"level": 7, "zone": 2},
+        {"level": 6, "zone": 2},
+        {"level": 5, "zone": 2},
+        {"level": 4, "zone": 1},
+        {"level": 3, "zone": 1},
+        {"level": 2, "zone": 1},
+        {"level": 1, "zone": 0}
+      ]
+  },
+
+  "camera2": {
+      "image_path": "cam2.png",
+      "line_positions": [50, 98, 144, 193, 240, 288, 335, 380, 427, 470, 509, 549, 580, 594],
+      "water_levels": [
+          {"level": 14, "zone": 2},
+          {"level": 13, "zone": 2},
+          {"level": 12, "zone": 2},
+          {"level": 11, "zone": 2},
+          {"level": 10, "zone": 2},
+          {"level": 9, "zone": 2},
+          {"level": 8, "zone": 2},
+          {"level": 7, "zone": 2},
+          {"level": 6, "zone": 2},
+          {"level": 5, "zone": 1},
+          {"level": 4, "zone": 1},
+          {"level": 3, "zone": 1},
+          {"level": 2, "zone": 0},
+          {"level": 1, "zone": 0}
+      ]
+  },
+
+  "camera3": {
+    "image_path": "cam3.png",
+    "line_positions": [26, 60, 114, 170, 208, 244, 280, 315, 350, 386, 423, 456, 525, 550, 566],
+    "water_levels": [
+        {"level": 15, "zone": 2},
+        {"level": 14, "zone": 2},
+        {"level": 13, "zone": 2},
+        {"level": 12, "zone": 2},
+        {"level": 11, "zone": 2},
+        {"level": 10, "zone": 2},
+        {"level": 9, "zone": 2},
+        {"level": 8, "zone": 2},
+        {"level": 7, "zone": 1},
+        {"level": 6, "zone": 1},
+        {"level": 5, "zone": 1},
+        {"level": 4, "zone": 1},
+        {"level": 3, "zone": 1},
+        {"level": 2, "zone": 0},
+        {"level": 1, "zone": 0}
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+ .form-select {
+    /* min-width: 23em;
+    max-width: 23em;
+    min-height: 2.3em;
+    max-height:2.3em; */
+    width: 23em;
+    height: 2.3em;
+
+    position: relative;
+    display: flex;
+    overflow:hidden;
+    /* top: 0.1em;   */
+    cursor: pointer;
+    
+    color: #444;
+    
+    outline: none;
+    border: .06em solid transparent;
+    border-radius: 1em;  /* version เก่า 0.5em*/
+    /* background-color: rgb(173, 216, 230); */
+    background-color: #EAF5FF;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.3em;
+    
+    /* margin-left: 2em; */
+    text-align: center;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 13px; */
+} 
+
+.form-select:focus {
+    background-color: #D3E9FD; 
+}
+
+
+
+
+.data-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 0.9rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.9fr 0.4fr;
+    grid-template-areas:
+       /* "option"
+       "map datacard"
+       "downloadButton"; */
+        "option datacard"
+        "map datacard"
+        "downloadButton datacard";
+                         
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg{
+    color: black;
+    font-size: x-large; 
+
+
+
+    /* font-family: 'YourThaiFont', Arial, sans-serif; */
+    font-family: 'Mitr', sans-serif;
+    box-sizing: border-box;
+    /* max-width: 90%;
+    width: 90%;
+    min-width: 300px; 
+    height: 76vh;      */
+
+    /* border-radius: 20px; */
+    /* background-color: rgb(203, 241, 249); */
+    /* background-color: rgb(225, 249, 254); */
+    background-color: rgb(65, 180, 203);
+    width: 100%;
+   
+    height: 100%; 
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    position: relative; 
+    margin: 0 auto;
+    /* margin-top: 60px; */
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 3px;
+    overflow: hidden;  /* fit the line */
+}
+
+.map{
+    /* border: 1px solid rgb(49, 226, 46); */
+    grid-area: map;
+}
+
+.datacard{
+    /* border: 1px solid rgb(49, 226, 46); */
+    grid-area: datacard;
+    /* font-size: 23px; */
+    /* border-radius: 1em; */
+} 
+
+.downloadButton{
+    /* border: 1px solid rgb(49, 226, 46); */
+    grid-area: downloadButton;
+}
+
+
+.option{
+    /* border: 1px solid rgb(49, 226, 46); */
+    grid-area: option;
+    
+}
+
+
+@media only screen and (max-width:900px){
+    .data-container{
+    grid-template-columns:1fr;
+    grid-template-rows: 0.1fr 1.2fr 0.5fr 0.2fr;
+    grid-template-areas:
+    "option"
+    "datacard"
+    "map"
+    "downloadButton";
+    }
+    .form-select{
+        font-size: 0.5em;
+        width: 15em;
+        height: 1.8em;
+        margin-top: 10px; 
+    }
+    .map{
+        height: 20em;
+        margin-top: 20px; 
+    }
+    .datacard{
+        margin-top: 20px; 
+    }
+    .downloadButton{
+        margin-top: 10px; 
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.dashboard-container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-gap: 0.9rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+       "header"
+       "dashboard-report";
+                         
+}
+
+.centered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    grid-area: header;
+}
+
+.dashboard-report{
+    grid-area: dashboard-report;
+    /* display: flex; */
+}
+
+.manual{
+    text-align: center;
+    font-size: x-large; 
+    font-family: 'Mitr', sans-serif;
+    margin-top: 20px; 
+}
+
+/* @media only screen and (max-width:900px){  
+    .dashboard-container{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-gap: 0.9rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas:
+           "header"
+           "dashboard-report"; 
+    }
+} */
