@@ -7,7 +7,7 @@ Our project focuses on utilizing image processing and computer vision to estimat
 by capturing images from positioned surveillance cameras every two minutes, and eliminating the need
 for additional installations or the use of alternative water level sensors or equipment. This approach
 maximizes the utilization of existing resources. Specifically, the Nakhon municipality’s pre-installed
-surveillance cameras will be leveraged for this purpose. Our project aims to employ image processing techniques to estimate water levels and subsequently store water level data in the database. This
+surveillance cameras will be leveraged for this purpose. Our project aims to employ image processing techniques to estimate water levels and subsequently store water level data in the database. This
 database will facilitate the retrieval and analysis of historical water level records.
 
 2. The notification system
