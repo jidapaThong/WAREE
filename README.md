@@ -20,7 +20,7 @@ to the situation.
 3. The web application
 
 The website serves as a platform for users to access real-time water level data directly from the
-homepage, and explore historical water levels through a user-friendly dashboard. Users can view realtime water level data for various camera locations, including zone information. It features a dashboard
+homepage, and explore historical water levels through a user-friendly dashboard. Users can view real-time water level data for various camera locations, including zone information. It features a dashboard
 that displays a stacked area chart of water levels, highest and lowest water levels based on specified
 dates, and a feature to change the language of the content. Furthermore, it provides the option for users
 to download historical water level data and a video tutorial explaining how to use the website.
