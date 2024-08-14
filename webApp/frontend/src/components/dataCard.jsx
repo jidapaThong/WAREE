@@ -1,9 +1,5 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
-// import axios from 'axios';
 import '../css/dataCard.css';
-//import { Link } from "react-router-dom";
-//import {greenStatusIcon, redStatusIcon, yellowStatusIcon} from '../icons/marker.jsx';
-
 import greenStatusIcon from "../icons/greenStatus.png";
 import redStatusIcon from "../icons/redStatus.png";
 import yellowStatusIcon from "../icons/yellowStatus.png";
@@ -17,38 +13,21 @@ class DataCard extends Component {
       super();
       this.state = {
         data: [],
-        // isLoading: false,
       };
     }
 
     componentDidMount() {
-        // Fetch data initially
         this.fetchData();
         this.interval = setInterval(this.fetchData, 30000);
     }
     componentWillUnmount() {
-        // Clear the interval when the component is unmounted to prevent memory leaks
         clearInterval(this.interval);
     }
-    // fetchData = () => {
-    //     fetch('http://127.0.0.1:8000/waterLevel/latest')
-    //       .then((response) => response.json())
-    //       .then((data) => {
-    //         this.setState({ data });
-    //       })
-    //       .catch((error) => {
-    //         console.error('Error fetching data:', error);
-    //       });
-    // };
-
 
     fetchData = () => {
-      // this.setState({isLoading: true});
-
         fetch('http://27.254.145.207:8000/waterLevel/latest')
           .then((response) => response.json())
           .then((data) => {
-            // this.setState({ data , isLoading: false });
             this.setState({ data });
           });
          
@@ -64,12 +43,10 @@ class DataCard extends Component {
   
     render() {
       const { selectedCamera, options } = this.props;
-      // const { data, isLoading } = this.state;
       const { data } = this.state;
       const selectedOption = options.find(option => option.id === parseInt(selectedCamera));
 
       return (
-        // <section className='card'>
         <section>
           <div className='top-card-name'><h1>{selectedOption ? selectedOption.text : "เลือกตำแหน่งกล้องวงจรปิด"}</h1></div>
           <div className='separator' /><div>
@@ -222,11 +199,7 @@ class DataCard extends Component {
                           )}
                         </div>
                       )}
-                      {/* <p style={{marginTop: '10px'}}></p> */}
                       <p style={{marginTop: '20px', fontSize: '16px'}}>อัพเดทล่าสุด วันที่ {this.formatDateTime(item.dateTime)} น.</p>  
-                      {/* <p style={{fontSize: '16px'}}>วันที่ {this.formatDateTime(item.dateTime)}</p> */}
-                      {/* <p>อัพเดทล่าสุด {item.dateTime}</p> */}
-                  
               </div>
               )
           ))}
@@ -236,52 +209,3 @@ class DataCard extends Component {
     }
   }
 export default DataCard;
-
-// const formattedDateTime = new Date(dateTime).toLocaleString('en-GB', {
-    //   day: '2-digit',
-    //   month: '2-digit',
-    //   year: 'numeric'});
- 
-    
-    //  function formatDateTime(dateTime) {
-    //   const formattedDateTime = new Date(dateTime).toLocaleString('en-GB', {
-    //     day: 'numeric',
-    //     month: 'numeric',
-    //     year: 'numeric',
-    //     hour: 'numeric',
-    //     minute: 'numeric',
-    //     second: 'numeric',
-    //   });
-    //   return formattedDateTime;
-    // }
-  
-    
-    // function formatDateTime(dateTime) {
-    //   const formattedDateTime = new Date(dateTime).toLocaleString('en-GB', {
-    //     day: '2-digit',
-    //     month: '2-digit',
-    //     year: 'numeric',
-    //     hour: '2-digit',
-    //     minute: '2-digit',
-    //     second: '2-digit',
-    //     // hour12: false,
-    //     // timeZone: 'UTC',
-    //   });
-    //   return formattedDateTime;
-    // }
-    
-  
-
-    
-
-
-
-// new version
-//  {data.map((item) => (
-//     item.cctvID === parseInt(selectedCamera) && (
-//       <div key={item.cctvID}>
-//         <p>CCTV ID: {item.cctvID}</p>
-//         <p>Water Level: {item.waterLevel}</p>
-//       </div>
-//     )
-//     ))}
