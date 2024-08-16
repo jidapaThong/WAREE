@@ -1,10 +1,6 @@
-#from fastapi import FastAPI
-#import uvicorn
 from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
-
 import waterLevel as water
-
 
 app = FastAPI(title="REST API")
 app.add_middleware(
@@ -14,7 +10,6 @@ app.add_middleware(
         allow_methods=["*"],
         allow_headers=["*"]
 )
-
 
 @app.get('/waterLevel/latest')
 async def getLatestWater():
