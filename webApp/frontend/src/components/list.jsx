@@ -1,19 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import '../css/list.css';
-// import Map from '../components/map.jsx'; 
 import DataCard from '../components/dataCard.jsx';
-// import HistoricalData from './dashboardComponent.jsx';
 import DownloadButton from './downloadButton.jsx';
-// import cctv01 from '../icons/cctv01.png';
-// import cctv02 from '../icons/cctv02.png';
-// import cctv03 from '../icons/cctv03.png';
-
 import {activeIcon, selectedIcon} from '../icons/marker';
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+
 
 function List() {
-  // Initialize state to store the selected option
   const [selectedOption, setSelectedOption] = useState();
   
   const options = [
@@ -24,9 +17,7 @@ function List() {
 
   const initialPosition = [8.426425,99.896187];
   const mapRef = useRef(null); // Reference current map
-  //const markerLayer = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
-  //const [selectedMarker, setSelectedMarker] = useState(null);
   const markers = [
     { id: 1, position: [8.399956561757051, 99.83347713947296], text: 'กล้องดูระดับน้ำคลองท่าใหญ่', lan: '8.3999565617570511', lon:'99.833477139472961', area:'คลองท่าใหญ่', district:'นคร', subdis:'นคร', province:'นครศรีธรรมราช'},
     { id: 2, position: [8.43438, 99.97097], text: 'กล้องดูระดับน้ำคลองหน้าเมือง',  lan: '8.40611717378089', lon:'99.965548423724144', area:'คลองหน้าเมือง', district:'นคร', subdis:'นคร', province:'นครศรีธรรมราช'},
@@ -38,8 +29,6 @@ function List() {
     setSelectedOption(event.target.value);
   };
 
-  // const [selectedDevice, setSelectedDevice] = useState(null);
-  
   let previousClickedMarker = null;
   const handleMarkerClick = (marker) => {
     // If a marker was previously clicked, clear its event and reset the icon
@@ -91,17 +80,12 @@ function List() {
     }
   }, [selectedOption , markers, selectedMarker]);
 
-   
   return (
-    
       <div className='data-container'>
-
         <div className='option centered'> 
-          {/* <select className='form-select' onChange={handleOptionChange} value={selectedOption}> */}
           <select className='form-select' onChange={handleOptionChange} value={selectedOption} style={{ fontSize: '20px' }}>
             <option value=''>เลือกตำแหน่งกล้องวงจรปิด</option>
             {options.map(({text, id}) => (
-              // <option value={id} key={id} className='custom-option'>
               <option value={id} key={id}>
                 {text}
               </option>
@@ -112,66 +96,13 @@ function List() {
         <div className='map centered'>
           <div id="map" style={{ width: '80%', height: '90%'}} />
         </div>
-        {/* <div className='downloadButton centered bg'> */}
         <div className='downloadButton centered'>
           <DownloadButton selectedCamera = {selectedOption}/>
         </div>
-        
         <div className='datacard centered'>
         <DataCard selectedCamera = {selectedOption} options = {options}/>
         </div>
-        
       </div>
-     
-     
-    
-    
   );
 }
 export default List;
-
-
-// return (
-    
-//   <div className='data-container'>
-
-//     <div className='option centered'> 
-//       <select className='form-select' value={selectedOption} onChange={handleOptionChange}>
-//         <option value=''>เลือกตำแหน่งกล้องวงจรปิด</option>
-//         {options.map(({text, id}) => (
-//           <option value={id} key={id}>
-//             {text}
-//           </option>
-//         ))}
-//       </select>
-//     </div>
-
-//     <div className='statusInfo centered'>
-//     <StatusInfo  />
-//     </div>
-
-
-//     <div className='map centered'>
-//         <MapContainer ref={mapRef} center={initialPosition} zoom={12} style={{ height: '70vh', width: '70vh' }}> 
-//         <TileLayer
-//           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//         />
-  
-      
-//         {markers.map((marker) => (
-//           <Marker key={marker.id} position={marker.position} icon={activeIcon}>
-//             <Popup>{marker.text}</Popup>
-            
-//           </Marker>
-//         ))}
-//       </MapContainer>
-//     </div>
-    
-//     <div className='datacard centered'>
-//     <DataCard />
-//     </div>
-    
-//   </div>
-
-// );
