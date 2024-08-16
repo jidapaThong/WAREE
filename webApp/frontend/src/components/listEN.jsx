@@ -1,19 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import '../css/list.css';
-// import Map from '../components/map.jsx'; 
 import DataCardEnglish from '../components/dataCardEN.jsx';
-// import HistoricalData from './dashboardComponent.jsx';
 import DownloadButtonEnglish from './downloadButtonEN.jsx';
-// import cctv01 from '../icons/cctv01.png';
-// import cctv02 from '../icons/cctv02.png';
-// import cctv03 from '../icons/cctv03.png';
-
 import {activeIcon, selectedIcon} from '../icons/marker';
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 function ListEnglish() {
-  // Initialize state to store the selected option
   const [selectedOption, setSelectedOption] = useState();
   
   const options = [
@@ -24,9 +16,7 @@ function ListEnglish() {
   
   const initialPosition = [8.426425,99.896187];
   const mapRef = useRef(null); // Reference current map
-  //const markerLayer = useState(null);
   const [selectedMarker, setSelectedMarker] = useState(null);
-  //const [selectedMarker, setSelectedMarker] = useState(null);
   const markers = [
     { id: 1, position: [8.399956561757051, 99.83347713947296], text: 'Tha Yai canal', lan: '8.3999565617570511', lon:'99.833477139472961', area:'Tha Yai canal', district:'Nakhon', subdis:'Nakhon', province:'Nakhon Si Thammarat'},
     { id: 2, position: [8.43438, 99.97097], text: 'Na Muang canal',  lan: '8.40611717378089', lon:'99.965548423724144', area:'Na Muang canal', district:'Nakhon', subdis:'Nakhon', province:'Nakhon Si Thammarat'},
@@ -38,8 +28,6 @@ function ListEnglish() {
     setSelectedOption(event.target.value);
   };
 
-  // const [selectedDevice, setSelectedDevice] = useState(null);
-  
   let previousClickedMarker = null;
   const handleMarkerClick = (marker) => {
     // If a marker was previously clicked, clear its event and reset the icon
@@ -95,11 +83,9 @@ function ListEnglish() {
   return (
       <div className='data-container'>
         <div className='option centered'> 
-          {/* <select className='form-select' onChange={handleOptionChange} value={selectedOption}> */}
           <select className='form-select' onChange={handleOptionChange} value={selectedOption} style={{ fontSize: '20px' }}>
             <option value=''>Select CCTV camera location</option>
             {options.map(({text, id}) => (
-              // <option value={id} key={id} className='custom-option'>
               <option value={id} key={id}>
                 {text}
               </option>
@@ -110,7 +96,6 @@ function ListEnglish() {
         <div className='map centered'>
           <div id="map" style={{ width: '80%', height: '90%'}} />
         </div>
-        {/* <div className='downloadButton centered bg'> */}
         <div className='downloadButton centered'>
           <DownloadButtonEnglish selectedCamera = {selectedOption}/>
         </div>
