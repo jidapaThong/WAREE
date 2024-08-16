@@ -25,7 +25,6 @@ function Header() {
                 <li>
                     <a href=''><img src ={thLogo} width='20' height='20'/>  TH ▾</a>
                     <ul className='dropdown'>
-                        {/* <li><a href='/'><img src ={thLogo} width='20' height='20'/>  TH</a></li> */}
                         <li><a href='/en'><img src ={enLogo} width='20' height='20'/>  EN</a></li>
                     </ul>
                     
@@ -34,11 +33,4 @@ function Header() {
         </nav>
     );
   }
-  
 export default Header;
-
-// <a href=''>ภาษา ▾</a>
-//                     <ul className='dropdown'>
-//                         <li><a href='/'><img src ={thLogo} width='20' height='20'/>  TH</a></li>
-//                         <li><a href='/en'><img src ={enLogo} width='20' height='20'/>  EN</a></li>
-//                     </ul>
