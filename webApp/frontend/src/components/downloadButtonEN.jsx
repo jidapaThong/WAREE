@@ -5,7 +5,6 @@ const DownloadButtonEnglish = ({ selectedCamera }) => {
   const [selectedYear, setSelectedYear] = useState('');
 
   useEffect(() => {
-    // Fetch the latest years (adjust as needed)
     const currentYear = new Date().getFullYear();
     const latestYears = Array.from({ length: 2 }, (_, index) => currentYear - index);
     setYears(latestYears);
@@ -40,7 +39,6 @@ const DownloadButtonEnglish = ({ selectedCamera }) => {
       <p style={{ fontSize: '20px', marginBottom: '10px' }}>Download water level data:</p>
       <select id="DownloadButton" onChange={handleYearChange} value={selectedYear} style={{ fontSize: '20px', width: '110px',textAlign: 'center',height: '40px',borderRadius:'1em', border: '3px solid #7BB1EF' }}>
         <option value="" disabled>Year</option>
-        {/* <option value="" disabled>Select a year</option> */}
         {years.map((year) => (
           <option key={year} value={year}>
             {year}
