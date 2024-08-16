@@ -25,9 +25,7 @@ function HeaderEnglish() {
                     <a href=''><img src ={enLogo} width='20' height='20'/>  EN ▾</a>
                     <ul className='dropdown'>
                         <li><a href='/'><img src ={thLogo} width='20' height='20'/>  TH</a></li>
-                        {/* <li><a href='/en'><img src ={enLogo} width='20' height='20'/>  EN</a></li> */}
                     </ul>
-                    
                 </li>  
             </ul>
         </nav>
