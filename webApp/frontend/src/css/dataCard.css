@@ -1,9 +1,6 @@
 .separator {
-    /* border-top: 1px solid #f7f6f6; */
     border-top: 3px solid #f7f6f6;
     width: 70%;
-   
-    /* bottom: 0; */
     text-align: center;
     margin: 30px auto;
     
@@ -20,82 +17,39 @@
     width: 140px;
     height: 90px;
     margin-top: 18px;
-    margin-left: 40px; /* ความห่าง icon น้ำกับ status */
+    margin-left: 40px;
 }
 
 .top-card-name{
     text-align: center;
-    /* padding-top: 50px;  */
-    /* margin-top: 99px;   */
-    /* ระยะ text กับขอบกล่องข้างบน เปลี่ยน 15%*/ 
-    font-size: 23px;                      /*add*/
+    font-size: 23px;                     
 }
 
 .card-data-container{
     text-align: center;
-    /* margin-top: 50px;  */
-    
     font-size: 23px; 
-    word-wrap: break-word; /* fit the line */
+    word-wrap: break-word; 
 }
 
-.card-data {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; */
-}
-
-/* .middle-card-data{
-    display: flex;
-    align-items: center;
-}
-
-.bottom-card {
-    display: grid;
-    
-    align-items: center;
-    text-align: center;
-} */
-
-/* margin: 0 auto;    Center horizontally */
 .card {
     color: black;
     font-size: x-large; 
-    /* font-family: 'YourThaiFont', Arial, sans-serif; */
     font-family: 'Mitr', sans-serif;
     box-sizing: border-box;
-    /* max-width: 100%; */
     width: 90%;
-    /* width: 95%; */
-    /* min-width: 300px;  */
-    /* height: 90%;      */
-    height: 90%;   
-    
-
-    /* border-radius: 20px; */
-    /* background-color: rgb(203, 241, 249); */
-    /* background-color: rgb(225, 249, 254); */
+    height: 90%; 
     background-color: rgb(249, 254, 255);
-    
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
     position: relative; 
     margin: 0 auto;
-    /* margin-top: 60px; */
-    
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    /* margin-top: 3px; */
-    overflow: hidden;  /* fit the line */
+    overflow: hidden;  
 }
 
 .loading-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px; /* Adjust the height based on your design */
+    height: 100px;
   }
   
   .loading-icon {
@@ -103,35 +57,9 @@
     height: 50px;
   }
 
-/* .centered{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
-/* margin: 0 auto; Center horizontally */
-
-/* .separator {
-    border-top: 1px solid #f7f6f6; 
-    width: 200%;
-    margin: 0 auto;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-} */
-
-/* border-top: 1px solid #f7f6f6;
-width: 200%; */
-
-
-/* Media query for smaller screens */
 @media screen and (max-width:900px) {
-    
     .statusIcon, .statusTextIcon {
-        /* width: 50px; 
-        height: 30px;  */
         width: 120px; 
         height: 80px; 
     }
