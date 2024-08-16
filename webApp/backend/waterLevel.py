@@ -1,7 +1,6 @@
 import os
 import requests
 import json
-#import pandas as pd
 import csv
 from io import StringIO
 from datetime import datetime, timedelta
@@ -29,10 +28,7 @@ def getAll():
         ret.append(dict(result))
     return ret
 
-
 def download_bigquery_data(cctvID,year):
-    # # Initialize BigQuery client
-    # client = bigquery.Client()
     query = f"""
         SELECT t1.cctvID,t2.cameraName_Eng,t1.dateTime,t1.waterLevel,t1.zone,
         FROM depa-smartcity-thailand.water_lavel.waterLevelRecord AS t1
