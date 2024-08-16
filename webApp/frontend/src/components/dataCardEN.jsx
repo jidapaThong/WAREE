@@ -1,8 +1,5 @@
 import React, { Component, useEffect, useRef, useState } from 'react';
-// import axios from 'axios';
 import '../css/dataCard.css';
-//import { Link } from "react-router-dom";
-//import {greenStatusIcon, redStatusIcon, yellowStatusIcon} from '../icons/marker.jsx';
 
 import greenStatusIcon from "../icons/greenStatus.png";
 import redStatusIcon from "../icons/redStatus.png";
@@ -16,26 +13,20 @@ class DataCardEnglish extends Component {
       super();
       this.state = {
         data: [],
-        // isLoading: false,
       };
     }
 
     componentDidMount() {
-        // Fetch data initially
         this.fetchData();
         this.interval = setInterval(this.fetchData, 30000);
     }
     componentWillUnmount() {
-        // Clear the interval when the component is unmounted to prevent memory leaks
         clearInterval(this.interval);
     }
     fetchData = () => {
-      // this.setState({isLoading: true});
-
         fetch('http://27.254.145.207:8000/waterLevel/latest')
           .then((response) => response.json())
           .then((data) => {
-            // this.setState({ data , isLoading: false });
             this.setState({ data });
           });
          
@@ -51,12 +42,10 @@ class DataCardEnglish extends Component {
   
     render() {
       const { selectedCamera, options } = this.props;
-      // const { data, isLoading } = this.state;
       const { data } = this.state;
       const selectedOption = options.find(option => option.id === parseInt(selectedCamera));
 
       return (
-        // <section className='card'>
         <section>
           <div className='top-card-name'><h1>{selectedOption ? selectedOption.text : "Select CCTV camera location"}</h1></div>
           <div className='separator' /><div>
@@ -69,7 +58,6 @@ class DataCardEnglish extends Component {
                           <p>Water Level Zone</p>
                           <img src={greenStatusIcon} alt='Green Status' className='statusIcon'/> 
                           <img src={greenTextIcon} alt='Green Status Text' className='statusTextIcon'/> 
-                          {/* <p>สถานะ: ปกติ</p> */}
                           </div>
                       )}
                       {item.zone === 1 && (
@@ -77,7 +65,6 @@ class DataCardEnglish extends Component {
                           <p>Water Level Zone</p>
                           <img src={yellowStatusIcon} alt='Yellow Status' className='statusIcon'/>
                           <img src={yellowTextIcon} alt='Yellow Status Text' className='statusTextIcon'/> 
-                          {/* <p>สถานะ: เฝ้าระวัง</p> */}
                           </div>
                       )}
                       {item.zone === 2 && (
@@ -85,7 +72,6 @@ class DataCardEnglish extends Component {
                           <p>Water Level Zone</p>
                           <img src={redStatusIcon} alt='Red Status' className='statusIcon'/>
                           <img src={redTextIcon} alt='Red Status Text' className='statusTextIcon'/> 
-                          {/* <p>สถานะ: วิกฤต</p> */}
                           </div>
                       )}
                       <div className='separator' /></div>
@@ -209,11 +195,7 @@ class DataCardEnglish extends Component {
                           )}
                         </div>
                       )}
-                      {/* <p style={{marginTop: '10px'}}></p> */}
-                      <p style={{marginTop: '20px', fontSize: '16px'}}>Last updated on {this.formatDateTime(item.dateTime)}</p>  
-                      {/* <p style={{fontSize: '16px'}}>วันที่ {this.formatDateTime(item.dateTime)}</p> */}
-                      {/* <p>อัพเดทล่าสุด {item.dateTime}</p> */}
-                  
+                      <p style={{marginTop: '20px', fontSize: '16px'}}>Last updated on {this.formatDateTime(item.dateTime)}</p>                    
               </div>
               )
           ))}
